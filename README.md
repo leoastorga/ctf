@@ -52,3 +52,34 @@ r.interactive()
 
 ![image](https://user-images.githubusercontent.com/1076452/111002592-810ccc80-8364-11eb-9f58-0ca4bb807ed0.png)
 
+### esab64
+
+cat esab64 | rev | base64 -d | rev
+
+```flag{fb5211b498afe87b1bd0db601117e16e}```
+
+### Resourceful
+
+![image](https://user-images.githubusercontent.com/1076452/111007125-e1077100-836c-11eb-9a10-edb11904272d.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111007090-cf25ce00-836c-11eb-989e-3e9f1d579b6c.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111007110-da78f980-836c-11eb-9510-ce5ad11a8954.png)
+
+```flag{7eecc051f5cb3a40cd6bda40de6eeb32}```
+
+### Chicken wings 
+
+https://lingojam.com/WingDing
+
+```flag{e0791ce68f718188c0378b1c0a3bdc9e}```
+
+### Andra
+
+![image](https://user-images.githubusercontent.com/1076452/111007452-a9e58f80-836d-11eb-8fcb-2b86f03bf057.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111007468-b2d66100-836d-11eb-91b5-ac0fed2e04a5.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111007499-b833ab80-836d-11eb-892e-e2854621be02.png)
+
+```flag{d9f72316dbe7ceab0db10bed1a738482}```
