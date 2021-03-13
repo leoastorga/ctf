@@ -188,7 +188,7 @@ print("Predicted: {}".format(num))
 guess(num)
 ```
 
-![image](https://user-images.githubusercontent.com/1076452/111038646-f205c000-8408-11eb-81a4-36111c8c6186.png)
+![image](https://user-images.githubusercontent.com/1076452/111038864-db139d80-8409-11eb-9023-5fbcb952e2ea.png)
 
 ```flag{e915b62b2195d76bfddaac0160ed3194}```
 
