@@ -177,6 +177,10 @@ https://twitter.com/OrionMorra/status/1363789936219082756
 ``` flag{636db5f4f0e36908a4f1a4edc5b0676e}  A password for Leo is `constelleorising` ```
 
 
+### Sensible
+
+Entrar con datos de leo
+
 
 ### Hydraulic
 
@@ -187,5 +191,17 @@ https://twitter.com/OrionMorra/status/1363789936219082756
 ![image](https://user-images.githubusercontent.com/1076452/111021210-8b9d8500-83a9-11eb-8aac-24088f8267f2.png)
 
 ```flag{cadbbfd75d2547700221f8c2588e026e}```
+
+### Banking On It
+
+Entrar con user gus y id_rsa
+
+### Internal
+
+
+### Degrade
+
+![image](https://user-images.githubusercontent.com/1076452/111021372-7a08ad00-83aa-11eb-80c7-5ecc86733971.png)
+
 
 
