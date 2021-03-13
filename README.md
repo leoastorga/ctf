@@ -19,6 +19,20 @@ http://challenge.nahamcon.com:30192/?echo=`%3C../flag.txt`
 
 ```flag{26080a2216e95746ec3e932002b9baa4}```
 
+### Shoelaces
+
+strings shoelaces.jpg | grep flag
+
+```flag{137288e960a3ae9b148e8a7db16a69b0}```
+
+### Pollex
+
+binwalk --dd='.*' pollex
+
+![image](https://user-images.githubusercontent.com/1076452/111015405-6435c080-8387-11eb-8b51-a97ce86ac290.png)
+
+```flag{65c34a1ec121a286600ddd48fe36bc00}```
+
 ### Ret2basic
 
 ```
@@ -91,6 +105,12 @@ Source code merch store
 ```flag{fafc10617631126361c693a2a3fce5a7} ```
 
 ## Mission
+
+Source code
+
+![image](https://user-images.githubusercontent.com/1076452/111015203-6ea38a80-8386-11eb-833a-647bffe6b2b6.png)
+
+```flag{48e117a1464c3202714dc9a350533a59}```
 
 ### Bionic
 
