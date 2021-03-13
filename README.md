@@ -273,5 +273,15 @@ Entrar con user gus y id_rsa
 
 ![image](https://user-images.githubusercontent.com/1076452/111021372-7a08ad00-83aa-11eb-80c7-5ecc86733971.png)
 
+### Centaurus
 
+![image](https://user-images.githubusercontent.com/1076452/111052561-9d7b3880-843a-11eb-9c3e-7bd1e74b1e44.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111052567-b257cc00-843a-11eb-9555-6d4ad8dec3a2.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111052569-bd126100-843a-11eb-8e22-f329691d9a0e.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111052573-c7ccf600-843a-11eb-866f-9f8872ffbfd6.png)
+
+```flag{4a8f943a965086945794066f7ce97f23}```
 
