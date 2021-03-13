@@ -153,6 +153,45 @@ SQLi En user agent
 
 ```flag{8b31eecb1831ed594fa27ef5b431fe34}```
 
+### Dice Roll
+
+```
+#!/usr/bin/env python
+from pwn import *
+from randcrack import RandCrack
+
+rc = RandCrack()
+r = remote('challenge.nahamcon.com', 31784)
+
+def roll():
+    r.sendlineafter("> ","2")
+    r.recvline()
+    data = r.recvline()
+    rc.submit(int(data))
+
+def guess(num):
+    print("Guessing the dice...")
+    r.sendlineafter("> ","3")
+    r.sendlineafter("> ","{}".format(num))
+    data = r.recvline()
+    print(data)
+    r.recvline()
+    data = r.recvline()
+    print(data)
+
+print("Getting data to make prediction...")
+for i in range(624):
+    roll()
+
+num = rc.predict_getrandbits(32)
+print("Predicted: {}".format(num))
+guess(num)
+```
+
+![image](https://user-images.githubusercontent.com/1076452/111038646-f205c000-8408-11eb-81a4-36111c8c6186.png)
+
+```flag{e915b62b2195d76bfddaac0160ed3194}```
+
 ## Mission
 
 Source code
