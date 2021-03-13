@@ -94,6 +94,10 @@ r.interactive()
 
 ![image](https://user-images.githubusercontent.com/1076452/111002592-810ccc80-8364-11eb-9f58-0ca4bb807ed0.png)
 
+### The List
+
+```flag{0eb219803dbfcda8620dae0772ae2d72}```
+
 ### esab64
 
 cat esab64 | rev | base64 -d | rev
