@@ -44,6 +44,13 @@ binwalk --dd='.*' pollex
 
 ```flag{6f980c0101c8aa361977cac06508a3de}```
 
+### Eighth Circle
+
+http://www.malbolge.doleczek.pl/
+
+![image](https://user-images.githubusercontent.com/1076452/111020021-baaff880-83a1-11eb-8efd-e168fd0f6bdd.png)
+
+
 ### Ret2basic
 
 ```
