@@ -7,7 +7,12 @@
 ```flag{e36bc5a67dd2fe5f33b62123f78fbcef}```
 
 ### Echo
-http://challenge.nahamcon.com:30192/?echo=`%3C../flag.txt`
+
+![image](https://user-images.githubusercontent.com/1076452/111018313-e7124780-8396-11eb-8fa1-b99817861f79.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111018299-d6fa6800-8396-11eb-8e52-279d10ecd11a.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111018288-cba73c80-8396-11eb-8d5b-53e1e3203942.png)
 
 ```flag{1beadaf44586ea4aba2ea9a00c5b6d91}```
 
