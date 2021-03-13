@@ -136,6 +136,23 @@ Source code merch store
 
 ```flag{fafc10617631126361c693a2a3fce5a7} ```
 
+### Bad Blog
+
+SQLi En user agent
+![image](https://user-images.githubusercontent.com/1076452/111036069-1c9d4c00-83fc-11eb-8b89-be0cd7109da4.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111036081-2e7eef00-83fc-11eb-9070-ff2fe726a45b.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111036096-40609200-83fc-11eb-91ee-bece11537691.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111036157-8e759580-83fc-11eb-8e5d-18b9580a45c2.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111036146-8158a680-83fc-11eb-883a-568c950166ae.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111036109-4eaeae00-83fc-11eb-820f-9789a85bca4d.png)
+
+```flag{8b31eecb1831ed594fa27ef5b431fe34}```
+
 ## Mission
 
 Source code
