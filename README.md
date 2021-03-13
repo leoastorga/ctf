@@ -178,4 +178,14 @@ https://twitter.com/OrionMorra/status/1363789936219082756
 
 
 
+### Hydraulic
+
+![image](https://user-images.githubusercontent.com/1076452/111021178-5133e800-83a9-11eb-8fb5-8724f47169f7.png)
+
+```[ssh] host: challenge.nahamcon.com   login: pavo   password: starsinthesky```
+
+![image](https://user-images.githubusercontent.com/1076452/111021210-8b9d8500-83a9-11eb-8aac-24088f8267f2.png)
+
+```flag{cadbbfd75d2547700221f8c2588e026e}```
+
 
