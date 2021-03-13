@@ -50,6 +50,16 @@ http://www.malbolge.doleczek.pl/
 
 ![image](https://user-images.githubusercontent.com/1076452/111020021-baaff880-83a1-11eb-8efd-e168fd0f6bdd.png)
 
+### Henpeck
+
+```tshark -r ./henpeck.pcap -Y 'usb.capdata && usb.data_len == 8' -T fields -e usb.capdata | sed 's/../:&/g2' > keyboards.txt```
+
+https://github.com/TeamRocketIst/ctf-usb-keyboard-parser
+
+```
+python usbkeyboard.py keyboards.txt 
+so the answer is flag{f7733e0093b7d281dd0a30fcf34a9634} hahahah lol
+```
 
 ### Ret2basic
 
