@@ -249,7 +249,7 @@ https://twitter.com/OrionMorra/status/1363789936219082756
 
 ### Sensible
 
-Entrar con datos de leo
+Entrar con datos de leo -> leo:constelleorising
 
 
 ### Hydraulic
@@ -264,7 +264,9 @@ Entrar con datos de leo
 
 ### Banking On It
 
-Entrar con user gus y id_rsa
+Entrar con user gus e id_rsa
+
+https://github.com/gusrodry/development/tree/master/config/.ssh
 
 ### Internal
 
