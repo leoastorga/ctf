@@ -192,6 +192,52 @@ guess(num)
 
 ```flag{e915b62b2195d76bfddaac0160ed3194}```
 
+### Microscopium
+
+React APP
+
+![image](https://user-images.githubusercontent.com/1076452/111053514-29915e00-8443-11eb-9c2c-2f80fb1c2181.png)
+
+```
+apktool.jar d microscopium.apk
+npx react-native-decompiler -i index.android.bundle -o ./output
+```
+
+![image](https://user-images.githubusercontent.com/1076452/111053531-4fb6fe00-8443-11eb-944f-2f67f8adf188.png)
+
+Bruteforce PIN
+```
+const { Base64 } = require('js-base64');
+const { sha256 } = require('js-sha256')
+
+var cipher64 = "AA9VAhkGBwNWDQcCBwMJB1ZWVlZRVAENW1RSAwAEAVsDVlIAV00=";
+var partKey = 'pgJ2K9PMJFHqzMnqEgL';
+
+var n = Base64.toUint8Array(cipher64);
+
+for (pin = 0; pin <= 9999; pin++) {
+    hash = sha256.create()
+    hash.update(partKey);
+    hash.update(String(pin));
+
+    var u = ''
+    for (var l = hash.hex(), c = 0; c < n.length; c++) {
+        u += String.fromCharCode(n[c] ^ l.charCodeAt(c));
+    }
+
+    if (u.indexOf('flag{') != -1) {
+        console.log("Pin: " + pin);
+        break;
+    }
+}
+console.log(u)
+```
+```
+Pin: 4784
+flag{06754e57e02b0c505149cd1055ba5e0b}
+```
+
+
 ## Mission
 
 Source code
