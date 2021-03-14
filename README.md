@@ -239,6 +239,8 @@ flag{06754e57e02b0c505149cd1055ba5e0b}
 
 ### Typewriter
 
+https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet.pdf
+
 ```volatility imageinfo -f image.bin```
 
 ![image](https://user-images.githubusercontent.com/1076452/111054076-3ebcbb80-8448-11eb-80ff-bce10100edd7.png)
