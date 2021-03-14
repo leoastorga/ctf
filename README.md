@@ -1,12 +1,61 @@
 # NahamCon CTF
 
-#### Rules Source code
+##Challenges
+
+1. [Rules Source Code](#rules-source-code)
+2. [Nahamcon2021](#nahamcon2021)
+3. [Veebee](#veebee)
+4. [Echo](#echo)
+5. [Homeward Bound](#homeward-bound)
+6. [Shoelaces](#shoelaces)
+7. [Pollex](#pollex)
+8. [Car Keys](#car-keys)
+9. [Eighth Circle](#eighth-circle)
+10. [Henpeck](#henpeck)
+11. [Ret2basic](#ret2basic)
+12. [The List](#the-list)
+13. [Esab64](#esab64)
+14. [Resourceful](#resourceful)
+15. [Chicken Wings](#chicken-wings)
+16. [Andra](#andra)
+17. [Merch Store](#merch-store)
+18. [Bad Blog](#bad-blog)
+19. [Dice Roll](#dice-roll)
+20. [Microscopium](#microscopium)
+21. [Typewriter](#typewriter)
+22. [Some-really-ordinary-program](#some-really-ordinary-program)
+23. [Weather APP](#weather-app)
+24. [Eaxy](#eaxy)
+25. [Mission](#mission)
+26. [Bionic](#bionic)
+27. [Meet The Team](#meet-the-team)
+28. [Gus](#gus)
+29. [Hercules](#hercules)
+30. [Lyra](#lyra)
+31. [Orion](#orion)
+32. [Leo](#leo)
+33. [Hydraulic](#hydraulic)
+34. [Banking On It](#banking-on-it)
+35. [Internal](#internal)
+36. [Degrade](#degrade)
+37. [Centaurus](#centaurus)
+
+#### Rules Source Code
+<details><summary>Solution</summary>
+	
 ```flag{90bc54705794a62015369fd8e86e557b}```
 
+</details>
+
 #### Nahamcon2021
+<details><summary>Solution</summary>
+
 ```flag{e36bc5a67dd2fe5f33b62123f78fbcef}```
+</details>
 
 #### Veebee
+<details><summary>Solution</summary>
+	
 https://www.aldeid.com/wiki/Decode-VBE-script
 
 ![image](https://user-images.githubusercontent.com/1076452/111078386-de735b80-84d3-11eb-912b-a0be3716c787.png)
@@ -17,8 +66,12 @@ Double decode, changing name to vbe after first decode.
 
 ```flag{f805593d933f5433f2a04f082f400d8c}```
 
+</details>
+
 #### Echo
 
+<details><summary>Solution</summary>
+	
 ![image](https://user-images.githubusercontent.com/1076452/111018313-e7124780-8396-11eb-8fa1-b99817861f79.png)
 
 ![image](https://user-images.githubusercontent.com/1076452/111018299-d6fa6800-8396-11eb-8e52-279d10ecd11a.png)
@@ -27,7 +80,12 @@ Double decode, changing name to vbe after first decode.
 
 ```flag{1beadaf44586ea4aba2ea9a00c5b6d91}```
 
+</details>
+
+
 #### Homeward Bound
+
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111000058-25d8db00-8360-11eb-9b99-3a045d6fd1f2.png)
 
@@ -35,33 +93,45 @@ Double decode, changing name to vbe after first decode.
 
 ```flag{26080a2216e95746ec3e932002b9baa4}```
 
+</details>
+
 #### Shoelaces
+<details><summary>Solution</summary>
 
 strings shoelaces.jpg | grep flag
 
 ```flag{137288e960a3ae9b148e8a7db16a69b0}```
 
+</details>
+
 #### Pollex
+<details><summary>Solution</summary>
 
 binwalk --dd='.*' pollex
 
 ![image](https://user-images.githubusercontent.com/1076452/111015405-6435c080-8387-11eb-8b51-a97ce86ac290.png)
 
 ```flag{65c34a1ec121a286600ddd48fe36bc00}```
+</details>
 
 #### Car Keys
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111019745-e7631080-839f-11eb-9708-59de62d02bc9.png)
 
 ```flag{6f980c0101c8aa361977cac06508a3de}```
+</details>
 
 #### Eighth Circle
+<details><summary>Solution</summary>
 
 http://www.malbolge.doleczek.pl/
 
 ![image](https://user-images.githubusercontent.com/1076452/111020021-baaff880-83a1-11eb-8efd-e168fd0f6bdd.png)
+</details>
 
 #### Henpeck
+<details><summary>Solution</summary>
 
 ```tshark -r ./henpeck.pcap -Y 'usb.capdata && usb.data_len == 8' -T fields -e usb.capdata | sed 's/../:&/g2' > keyboards.txt```
 
@@ -71,8 +141,11 @@ https://github.com/TeamRocketIst/ctf-usb-keyboard-parser
 python usbkeyboard.py keyboards.txt 
 so the answer is flag{f7733e0093b7d281dd0a30fcf34a9634} hahahah lol
 ```
+</details>
 
 #### Ret2basic
+
+<details><summary>Solution</summary>
 
 ```
 #!/usr/bin/python
@@ -105,17 +178,25 @@ r.interactive()
 
 ![image](https://user-images.githubusercontent.com/1076452/111002592-810ccc80-8364-11eb-9f58-0ca4bb807ed0.png)
 
+
+</details>
+
 #### The List
+<details><summary>Solution</summary>
 
 ```flag{0eb219803dbfcda8620dae0772ae2d72}```
+</details>
 
 #### esab64
+<details><summary>Solution</summary>
 
 cat esab64 | rev | base64 -d | rev
 
 ```flag{fb5211b498afe87b1bd0db601117e16e}```
+</details>
 
 #### Resourceful
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111007125-e1077100-836c-11eb-9a10-edb11904272d.png)
 
@@ -124,14 +205,18 @@ cat esab64 | rev | base64 -d | rev
 ![image](https://user-images.githubusercontent.com/1076452/111007110-da78f980-836c-11eb-9510-ce5ad11a8954.png)
 
 ```flag{7eecc051f5cb3a40cd6bda40de6eeb32}```
+</details>
 
 #### Chicken wings 
+<details><summary>Solution</summary>
 
 https://lingojam.com/WingDing
 
 ```flag{e0791ce68f718188c0378b1c0a3bdc9e}```
+</details>
 
 #### Andra
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111007452-a9e58f80-836d-11eb-8fcb-2b86f03bf057.png)
 
@@ -140,14 +225,18 @@ https://lingojam.com/WingDing
 ![image](https://user-images.githubusercontent.com/1076452/111007499-b833ab80-836d-11eb-892e-e2854621be02.png)
 
 ```flag{d9f72316dbe7ceab0db10bed1a738482}```
+</details>
 
 #### Merch Store
+<details><summary>Solution</summary>
 
 Source code merch store
 
 ```flag{fafc10617631126361c693a2a3fce5a7} ```
+</details>
 
 #### Bad Blog
+<details><summary>Solution</summary>
 
 SQLi En user agent
 ![image](https://user-images.githubusercontent.com/1076452/111036069-1c9d4c00-83fc-11eb-8b89-be0cd7109da4.png)
@@ -163,8 +252,10 @@ SQLi En user agent
 ![image](https://user-images.githubusercontent.com/1076452/111036109-4eaeae00-83fc-11eb-820f-9789a85bca4d.png)
 
 ```flag{8b31eecb1831ed594fa27ef5b431fe34}```
+</details>
 
 #### Dice Roll
+<details><summary>Solution</summary>
 
 ```
 #!/usr/bin/env python
@@ -202,8 +293,10 @@ guess(num)
 ![image](https://user-images.githubusercontent.com/1076452/111038864-db139d80-8409-11eb-9023-5fbcb952e2ea.png)
 
 ```flag{e915b62b2195d76bfddaac0160ed3194}```
+</details>
 
 #### Microscopium
+<details><summary>Solution</summary>
 
 React APP
 
@@ -247,8 +340,10 @@ console.log(u)
 Pin: 4784
 flag{06754e57e02b0c505149cd1055ba5e0b}
 ```
+</details>
 
 #### Typewriter
+<details><summary>Solution</summary>
 
 https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet.pdf
 
@@ -271,8 +366,10 @@ https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet
 ![image](https://user-images.githubusercontent.com/1076452/111054054-061ce200-8448-11eb-9a86-b5050475f6ce.png)
 
 ```flag{c442f9ee67c7ab471bb5643a9346cf5e}```
+</details>
 
 #### some-really-ordinary-program
+<details><summary>Solution</summary>
 
 ```
 #!/usr/bin/env python3
@@ -366,8 +463,10 @@ p.sendline(payload)
 p.interactive()
 ```
 ```flag{175c051dbd3db6857f3e6d2907952c87}```
+</details>
 
 #### Weather APP
+<details><summary>Solution</summary>
 
 ```
 #!/usr/bin/python3
@@ -418,8 +517,10 @@ res = requests.post(url, data, headers)
 print(res.text)
 ```
 ```HTB{w3lc0m3_t0_th3_p1p3_dr34m}```
+</details>
 
 #### Eaxy
+<details><summary>Solution</summary>
 
 ```
 #!/usr/bin/env python3
@@ -451,20 +552,26 @@ for i in charset:
 print(''.join(flag))
 ```
 ```flag{16edfce5c12443b61828af6cab90dc79}```
+</details>
 
 ## Mission
+<details><summary>Solution</summary>
 
 Source code
 
 ![image](https://user-images.githubusercontent.com/1076452/111015203-6ea38a80-8386-11eb-833a-647bffe6b2b6.png)
 
 ```flag{48e117a1464c3202714dc9a350533a59}```
+</details>
 
 ### Bionic
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111012004-27170180-837a-11eb-8aa6-8f0434726b1b.png)
+</details>
 
 ### Meet The Team
+<details><summary>Solution</summary>
 
 https://github.com/internetwache/GitTools
 
@@ -474,31 +581,41 @@ git show
 
 ![image](https://user-images.githubusercontent.com/1076452/111013989-719b7c80-8380-11eb-9d8b-719daeb8cbe1.png)
 
+</details>
 
 ### Gus
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111011972-ffc03480-8379-11eb-8996-25197d69882c.png)
 
+</details>
 
 ### Hercules
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111013207-5da24b80-837d-11eb-94b6-fa2ce6b44d39.png)
+</details>
 
 ### Lyra
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111014284-c986b300-8381-11eb-86a2-847f0693ee78.png)
 
 ![image](https://user-images.githubusercontent.com/1076452/111014303-de634680-8381-11eb-85ee-3b94b44dac07.png)
 
 ![image](https://user-images.githubusercontent.com/1076452/111014312-ea4f0880-8381-11eb-9bfb-d8e0a0ae7060.png)
+</details>
 
 ### Orion
+<details><summary>Solution</summary>
 
 https://twitter.com/OrionMorra/status/1363789936219082756
 
 ![image](https://user-images.githubusercontent.com/1076452/111014551-ea9bd380-8382-11eb-9418-a6b223bd1c13.png)
+</details>
 
 ### Leo
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111017557-1c1c9b00-8393-11eb-8485-7011fa58aea8.png)
 
@@ -506,13 +623,17 @@ https://twitter.com/OrionMorra/status/1363789936219082756
 
 ``` flag{636db5f4f0e36908a4f1a4edc5b0676e}  A password for Leo is `constelleorising` ```
 
+</details>
 
 ### Sensible
+<details><summary>Solution</summary>
 
 Entrar con datos de leo -> leo:constelleorising
 
+</details>
 
 ### Hydraulic
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111021178-5133e800-83a9-11eb-8fb5-8724f47169f7.png)
 
@@ -521,21 +642,29 @@ Entrar con datos de leo -> leo:constelleorising
 ![image](https://user-images.githubusercontent.com/1076452/111021210-8b9d8500-83a9-11eb-8aac-24088f8267f2.png)
 
 ```flag{cadbbfd75d2547700221f8c2588e026e}```
+</details>
 
 ### Banking On It
+<details><summary>Solution</summary>
 
 Entrar con user gus e id_rsa
 
 https://github.com/gusrodry/development/tree/master/config/.ssh
+</details>
 
 ### Internal
+<details><summary>Solution</summary>
 
+</details>
 
 ### Degrade
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111021372-7a08ad00-83aa-11eb-80c7-5ecc86733971.png)
+</details>
 
 ### Centaurus
+<details><summary>Solution</summary>
 
 ![image](https://user-images.githubusercontent.com/1076452/111052561-9d7b3880-843a-11eb-9c3e-7bd1e74b1e44.png)
 
@@ -546,4 +675,4 @@ https://github.com/gusrodry/development/tree/master/config/.ssh
 ![image](https://user-images.githubusercontent.com/1076452/111052573-c7ccf600-843a-11eb-866f-9f8872ffbfd6.png)
 
 ```flag{4a8f943a965086945794066f7ce97f23}```
-
+</details>
