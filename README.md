@@ -6,6 +6,17 @@
 ### Nahamcon2021
 ```flag{e36bc5a67dd2fe5f33b62123f78fbcef}```
 
+### Veebee
+https://www.aldeid.com/wiki/Decode-VBE-script
+
+![image](https://user-images.githubusercontent.com/1076452/111078386-de735b80-84d3-11eb-912b-a0be3716c787.png)
+
+Double decode, changing name to vbe after first decode.
+
+![image](https://user-images.githubusercontent.com/1076452/111078404-f77c0c80-84d3-11eb-9234-6d43c5088ee0.png)
+
+```flag{f805593d933f5433f2a04f082f400d8c}```
+
 ### Echo
 
 ![image](https://user-images.githubusercontent.com/1076452/111018313-e7124780-8396-11eb-8fa1-b99817861f79.png)
