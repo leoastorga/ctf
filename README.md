@@ -53,7 +53,7 @@
 ```flag{e36bc5a67dd2fe5f33b62123f78fbcef}```
 </details>
 
-`#### Veebee`
+#### Veebee
 <details><summary>Solution</summary>
 	
 https://www.aldeid.com/wiki/Decode-VBE-script
