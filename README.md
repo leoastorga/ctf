@@ -237,6 +237,27 @@ Pin: 4784
 flag{06754e57e02b0c505149cd1055ba5e0b}
 ```
 
+### Typewriter
+
+```volatility imageinfo -f image.bin```
+
+![image](https://user-images.githubusercontent.com/1076452/111054076-3ebcbb80-8448-11eb-80ff-bce10100edd7.png)
+
+```volatility -f image.bin --profile=Win7SP1x86_23418 cmdline```
+
+![image](https://user-images.githubusercontent.com/1076452/111054089-5eec7a80-8448-11eb-83d7-1090de2c698d.png)
+
+```volatility -f image.bin --profile=Win7SP1x86_23418 filescan | grep .docx```
+
+![image](https://user-images.githubusercontent.com/1076452/111054096-79beef00-8448-11eb-889a-bc721ae3a9c8.png)
+
+```volatility -f image.bin --profile=Win7SP1x86_23418 dumpfiles -Q 0x000000007eb665b8 -n --dump-dir=.```
+
+![image](https://user-images.githubusercontent.com/1076452/111054105-8c392880-8448-11eb-84c0-c3c7f4d74426.png)
+
+![image](https://user-images.githubusercontent.com/1076452/111054054-061ce200-8448-11eb-9a86-b5050475f6ce.png)
+
+```flag{c442f9ee67c7ab471bb5643a9346cf5e}```
 
 ## Mission
 
