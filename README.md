@@ -273,6 +273,8 @@ SQLi En user agent
 #### Dice Roll
 <details><summary>Solution</summary>
 
+https://github.com/tna0y/Python-random-module-cracker
+
 ```
 #!/usr/bin/env python
 from pwn import *
