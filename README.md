@@ -43,7 +43,6 @@
 #### Rules Source Code
 <details><summary>Solution</summary>
 
-
 Looking at the rules page source code
 https://ctf.nahamcon.com/rules
 
@@ -56,7 +55,6 @@ https://ctf.nahamcon.com/rules
 #### Nahamcon2021
 <details><summary>Solution</summary>
 
-
 https://twitter.com/NahamSec/status/1370077327082680321
 
 ![image](https://user-images.githubusercontent.com/1076452/111090516-bc4aff00-850e-11eb-9ec5-84700071e38d.png)
@@ -66,7 +64,6 @@ https://twitter.com/NahamSec/status/1370077327082680321
 
 #### Veebee
 <details><summary>Solution</summary>
-
 
 For this challenge, I used the tool VB Script Coders.exe
 https://www.aldeid.com/wiki/Decode-VBE-script
@@ -78,7 +75,6 @@ Clicked VBE-2-VBS button, selected the vbe file and the tool generated a file ca
 ![image](https://user-images.githubusercontent.com/1076452/111078404-f77c0c80-84d3-11eb-9234-6d43c5088ee0.png)
 
 ```flag{f805593d933f5433f2a04f082f400d8c}```
-
 </details>
 
 #### Echo
@@ -99,7 +95,6 @@ Clicked VBE-2-VBS button, selected the vbe file and the tool generated a file ca
 #### Homeward Bound
 
 <details><summary>Solution</summary>
-
 
 When entering the website, it displayed a message "Sorry, this page is not accessible externally".
 ![image](https://user-images.githubusercontent.com/1076452/111000058-25d8db00-8360-11eb-9b99-3a045d6fd1f2.png)
@@ -124,7 +119,9 @@ strings shoelaces.jpg | grep flag
 #### Pollex
 <details><summary>Solution</summary>
 
-binwalk --dd='.*' pollex
+Using binwalk to extract all files from challenge file
+
+```binwalk --dd='.*' pollex```
 
 ![image](https://user-images.githubusercontent.com/1076452/111015405-6435c080-8387-11eb-8b51-a97ce86ac290.png)
 
@@ -133,6 +130,8 @@ binwalk --dd='.*' pollex
 
 #### Car Keys
 <details><summary>Solution</summary>
+
+Using https://cryptii.com/ and alphabetical substitution with the encoded flag and the key (qwerty) obtained from challenge description.
 
 ![image](https://user-images.githubusercontent.com/1076452/111019745-e7631080-839f-11eb-9708-59de62d02bc9.png)
 
