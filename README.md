@@ -43,6 +43,7 @@
 #### Rules Source Code
 <details><summary>Solution</summary>
 
+
 Looking at the rules page source code
 https://ctf.nahamcon.com/rules
 
@@ -54,7 +55,8 @@ https://ctf.nahamcon.com/rules
 
 #### Nahamcon2021
 <details><summary>Solution</summary>
-	
+
+
 https://twitter.com/NahamSec/status/1370077327082680321
 
 ![image](https://user-images.githubusercontent.com/1076452/111090516-bc4aff00-850e-11eb-9ec5-84700071e38d.png)
@@ -64,6 +66,7 @@ https://twitter.com/NahamSec/status/1370077327082680321
 
 #### Veebee
 <details><summary>Solution</summary>
+
 
 For this challenge, I used the tool VB Script Coders.exe
 https://www.aldeid.com/wiki/Decode-VBE-script
@@ -81,7 +84,7 @@ Clicked VBE-2-VBS button, selected the vbe file and the tool generated a file ca
 #### Echo
 
 <details><summary>Solution</summary>
-	
+
 ![image](https://user-images.githubusercontent.com/1076452/111018313-e7124780-8396-11eb-8fa1-b99817861f79.png)
 
 ![image](https://user-images.githubusercontent.com/1076452/111018299-d6fa6800-8396-11eb-8e52-279d10ecd11a.png)
@@ -97,8 +100,12 @@ Clicked VBE-2-VBS button, selected the vbe file and the tool generated a file ca
 
 <details><summary>Solution</summary>
 
+
+When entering the website, it displayed a message "Sorry, this page is not accessible externally".
 ![image](https://user-images.githubusercontent.com/1076452/111000058-25d8db00-8360-11eb-9b99-3a045d6fd1f2.png)
 
+
+Added "X-Fordered-For: 127.0.0.1" header (which is a common method for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer) and got the flag.
 ![image](https://user-images.githubusercontent.com/1076452/111000087-30937000-8360-11eb-998c-07f49f530a66.png)
 
 ```flag{26080a2216e95746ec3e932002b9baa4}```
