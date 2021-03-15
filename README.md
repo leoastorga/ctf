@@ -42,25 +42,35 @@
 
 #### Rules Source Code
 <details><summary>Solution</summary>
-	
+
+Looking at the rules page source code
+https://ctf.nahamcon.com/rules
+
+![image](https://user-images.githubusercontent.com/1076452/111090411-65452a00-850e-11eb-943b-b20405467058.png)
+
 ```flag{90bc54705794a62015369fd8e86e557b}```
 
 </details>
 
 #### Nahamcon2021
 <details><summary>Solution</summary>
+	
+https://twitter.com/NahamSec/status/1370077327082680321
+
+![image](https://user-images.githubusercontent.com/1076452/111090516-bc4aff00-850e-11eb-9ec5-84700071e38d.png)
 
 ```flag{e36bc5a67dd2fe5f33b62123f78fbcef}```
 </details>
 
 #### Veebee
 <details><summary>Solution</summary>
-	
+
+For this challenge, I used the tool VB Script Coders.exe
 https://www.aldeid.com/wiki/Decode-VBE-script
 
 ![image](https://user-images.githubusercontent.com/1076452/111078386-de735b80-84d3-11eb-912b-a0be3716c787.png)
 
-Double decode, changing name to vbe after first decode.
+Clicked VBE-2-VBS button, selected the vbe file and the tool generated a file called "decoded.vbs". Looking at the "decoded.vbs" source code it was still encoded so changed the extension from .vba to .vbe and decoded it again.
 
 ![image](https://user-images.githubusercontent.com/1076452/111078404-f77c0c80-84d3-11eb-9234-6d43c5088ee0.png)
 
